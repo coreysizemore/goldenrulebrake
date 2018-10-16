@@ -1,0 +1,294 @@
+/* color variables */
+
+$colorone: #4f769e;
+$colortwo: #e6bd5c;
+$colorthree: #002851;
+
+/* end color variables */
+
+
+/* theme styling */
+
+#search,
+#mobile_nav {
+	background: rgba($colorone, 0.95);
+}
+
+header.slideshow {
+	.image_slide.slide_1 {
+		background: url('../img/slideshow1.jpg') no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+	
+	.image_slide.slide_2 {
+		background: url('../img/slideshow2.jpg') no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+	
+	.image_slide.slide_3 {
+		background: url('../img/slideshow3.jpg') no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+}
+
+header {
+	background: url('../img/home.jpg') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#home_logo {
+	#home_page_nav {
+		ul {
+			li {
+				a:link,
+				a:visited {
+					background: $colorthree;
+				}
+			}
+		}
+	}
+}
+
+.call_out_boxes {
+	background: $colortwo;
+	
+	.cob_1,
+	.cob_2,
+	.cob_3,
+	.cob_4,
+	.cob_5 {
+		
+		.call_out_boxes_item {
+			.square.icon,
+			.circle.icon {
+				background: $colorthree;
+			}
+			
+			h2,h3 {
+				color: $colorthree;
+			}	
+		}
+		
+	}
+}
+
+.content {
+	h1,h3 {
+		color: $colorthree;
+	}
+	
+	hr.divider {
+		background: $colorthree;
+	}
+	
+	a:link,
+	a:visited {
+		color: $colortwo;
+		
+		&.button {
+			background: $colorthree;
+			color: #ffffff;
+		}
+	}
+}
+
+.sidebar {
+	h3 {
+		color: $colorthree;
+	}
+	
+	a:link,
+	a:visited {
+		color: $colortwo;
+	}
+}
+
+#parallax {
+	background: url('../img/parallax.jpg') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+footer {
+	background: $colorthree;
+	background: -moz-linear-gradient(top, $colorone 0%, $colorthree 100%);
+	background: -webkit-linear-gradient(top, $colorone 0%,$colorthree 100%);
+	background: linear-gradient(to bottom, $colorone 0%,$colorthree 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$colorone', endColorstr='$colorthree',GradientType=0 );
+}
+
+#copyright {
+	background: $colorthree;
+}
+
+/* youtube videos */
+
+.youtube_videos {
+	background: $colorone;
+	padding: 30px 0px;
+	
+	.video_1,
+	.video_2,
+	.video_3,
+	.video_4,
+	.video_5 {
+		display: inline-block;
+		padding: 0px 10px;
+		
+		.youtube_video_item {
+			iframe {
+				width: 100%;
+			}
+		}
+	}
+	
+	.video_1 {
+		width: calc(100% - 20px);
+		
+		.youtube_video_item {
+			text-align: center;
+			
+			iframe {
+				width: 320px;
+				height: 220px;
+			}
+		}
+	}
+	
+	.video_2 {
+		width: calc(50% - 20px);
+		
+		.youtube_video_item {
+			text-align: center;
+			
+			iframe {
+				width: 320px;
+				height: 220px;
+			}
+		}
+	}
+	
+	.video_3 {
+		width: calc(33.3333333333332% - 20px);
+		
+		.youtube_video_item {
+			iframe {
+				height: 220px;
+			}
+		}
+	}
+	
+	.video_4 {
+		width: calc(25% - 20px);
+		
+		.youtube_video_item {
+			iframe {
+				height: 200px;
+			}
+		}
+	}
+	
+	.video_5 {
+		width: calc(20% - 20px);
+		
+		.youtube_video_item {
+			iframe {
+				height: 160px;
+			}
+		}
+	}
+}
+
+/* responsive media queries */
+
+@media (min-width: 980px) and (max-width: 1220px) {
+	
+}
+	
+@media (min-width: 768px) and (max-width: 979px) {
+	
+	.youtube_videos {
+		
+		.video_5,
+		.video_4,
+		.video_3,
+		.video_2,
+		.video_1 {
+			width: calc(50% - 20px);
+			
+			.youtube_video_item {
+				margin-bottom: 20px;
+				
+				iframe {
+					width: 100%;
+					height: 160px;
+				}
+			}
+		}
+	}
+	
+}
+	
+@media (min-width: 480px) and (max-width: 767px) {
+	
+	header {
+		background: url('../img/home_mobile.jpg') no-repeat;
+	    background-size: 130%;
+	    background-attachment: fixed;
+	}
+	
+	.youtube_videos {
+		
+		.video_5,
+		.video_4,
+		.video_3,
+		.video_2,
+		.video_1 {
+			width: calc(50% - 20px);
+			
+			.youtube_video_item {
+				margin-bottom: 20px;
+				
+				iframe {
+					width: 100%;
+					height: 180px;
+				}
+			}
+		}
+	}
+	
+}
+	
+@media (min-width: 0px) and (max-width: 479px) {
+	
+	header {
+		background: url('../img/home_mobile.jpg') no-repeat;
+	    background-size: 160%;
+	    background-attachment: fixed;
+	}
+
+	.youtube_videos {
+		
+		.video_5,
+		.video_4,
+		.video_3,
+		.video_2,
+		.video_1 {
+			width: calc(100% - 20px);
+			
+			.youtube_video_item {
+				margin-bottom: 20px;
+				
+				iframe {
+					width: 100%;
+					height: 200px;
+				}
+			}
+		}
+	}
+	
+}
