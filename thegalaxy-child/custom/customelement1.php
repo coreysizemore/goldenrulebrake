@@ -1,9 +1,9 @@
 <?php
-
-	if( have_rows('call_out_boxes','option') ):
 	
-		$items = get_field('youtube_videos');
-		
+	$items = get_field('youtube_videos');
+	
+	if ($items):
+	
 		shuffle($items);
 	
 		$count = count($items);
@@ -47,11 +47,7 @@
 		endforeach;
 					
 		echo '</div></div></div></div>';
-							
-	else :
 	
-		// do nothing
-				
 	endif;
-	
+		
 ?>

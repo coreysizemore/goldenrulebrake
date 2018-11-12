@@ -14,7 +14,22 @@ $colorthree: #002851;
 	background: rgba($colorone, 0.95);
 }
 
-header.slideshow {
+#attention_bar_header {
+	.attention_bar_header_content {
+		div {
+			ul {
+				li {
+					a:link,
+					a:visited {
+						color: $colortwo;
+					}
+				}
+			}
+		}
+	}
+}
+
+header.slideshow_tall {
 	.image_slide.slide_1 {
 		background: url('../img/slideshow1.jpg') no-repeat;
 		background-size: cover;
@@ -53,7 +68,7 @@ header {
 	}
 }
 
-.call_out_boxes {
+#call_out_boxes {
 	background: $colortwo;
 	
 	.cob_1,
@@ -69,10 +84,16 @@ header {
 			}
 			
 			h2,h3 {
-				color: $colorthree;
-			}	
+				color: $colorone;
+			}
 		}
 		
+	}
+}
+
+.page-id-2 {
+	#main {
+		padding-top: 0px;
 	}
 }
 
@@ -130,6 +151,7 @@ footer {
 .youtube_videos {
 	background: $colorone;
 	padding: 30px 0px;
+	margin-bottom: 60px;
 	
 	.video_1,
 	.video_2,
@@ -203,9 +225,50 @@ footer {
 	}
 }
 
+/* location page */
+
+.location_wrapper {
+	
+	.location_item {
+		background: $colorone;
+		display: inline-block;
+		margin: 0px 20px;
+		vertical-align: top;
+		padding: 20px;
+		width: calc(33.333332% - 80px);
+		border-radius: 5px;
+		
+		h2 {
+			color: $colortwo;
+		}
+		
+		p {
+			color: #ffffff;
+		}
+	}
+}
+
+/* testimonials */
+
+.testimonial_wrapper {
+	iframe {
+		display: inline-block;
+		height: 150px;
+		margin: 0px 20px 20px 20px;
+		width: calc(25% - 40px);
+	}
+}
+
 /* responsive media queries */
 
 @media (min-width: 980px) and (max-width: 1220px) {
+	
+	.location_wrapper {
+		.location_item {
+			margin: 0px 0px 20px 0px;
+			width: calc(100% - 40px);
+		}
+	}
 	
 }
 	
@@ -228,6 +291,20 @@ footer {
 					height: 160px;
 				}
 			}
+		}
+	}
+	
+	.location_wrapper {
+		.location_item {
+			margin: 0px 0px 20px 0px;
+			width: calc(100% - 40px);
+		}
+	}
+	
+	.testimonial_wrapper {
+		iframe {
+			height: 150px;
+			width: calc(50% - 40px);
 		}
 	}
 	
@@ -261,6 +338,20 @@ footer {
 		}
 	}
 	
+	.location_wrapper {
+		.location_item {
+			margin: 0px 0px 20px 0px;
+			width: calc(100% - 40px);
+		}
+	}
+	
+	.testimonial_wrapper {
+		iframe {
+			height: 150px;
+			width: calc(50% - 40px);
+		}
+	}
+	
 }
 	
 @media (min-width: 0px) and (max-width: 479px) {
@@ -288,6 +379,20 @@ footer {
 					height: 200px;
 				}
 			}
+		}
+	}
+	
+	.location_wrapper {
+		.location_item {
+			margin: 0px 0px 20px 0px;
+			width: calc(100% - 40px);
+		}
+	}
+	
+	.testimonial_wrapper {
+		iframe {
+			height: 150px;
+			width: calc(100% - 40px);
 		}
 	}
 	
